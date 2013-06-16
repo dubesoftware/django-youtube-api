@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Watch interesting videos!</title>
+	<meta charset="utf-8">
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<div class="container">			
+			<h1><em>Index.</em></h1>
+			{% if form %}
+				<form action="/video/" method="post">{% csrf_token %}
+				{{ form.as_p }}
+				<input type="submit" value="Post video" />
+				</form>
+			{% endif %}	
+		</div>
+	</header>
+</body>
+</html>
