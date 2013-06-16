@@ -7,13 +7,13 @@ admin.autodiscover()
 from tastypie.api import Api
 from videos.api import VideoResource
 
-v1_video_api = Api(api_name='v1_video_api')
-v1_video_api.register(VideoResource())
+v1 = Api(api_name='v1')
+v1.register(VideoResource())
 
 urlpatterns = patterns('',
     # Examples:
     url(r'^', include('mainsite.urls')),
-    url(r'^api/', include(v1_video_api.urls)),
+    url(r'^api/', include(v1.urls)),
     url(r'^videos/', include('videos.urls')),
     # url(r'^videosite/', include('videosite.foo.urls')),
 
