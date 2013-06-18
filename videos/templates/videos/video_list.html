@@ -12,11 +12,11 @@
 		<div class="container">			
 			<h1><em>A list of current videos.</em></h1>
 			{% if video_list %}
-				{% for video in video_list %}
-					<p>{{ video.video_title }}</p>
-					<p>{{ video.video_description }}</p>
-					<p>{{ video.video_link }}</p>
-				{% endfor %}
+				<p>
+					{% for video in video_list %}
+						<p><a href="{% url 'get_video' video.id %}">{{ video.video_link }}</a></p>
+					{% endfor %}
+				</p>
 			{% endif %}	
 		</div>
 	</header>

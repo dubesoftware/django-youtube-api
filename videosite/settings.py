@@ -157,3 +157,5 @@ LOGGING = {
         },
     }
 }
+
+YOUTUBE_API_KEY = 'AIzaSyAWOyWpw0mrGczmt1IDGtnuC2v88ShjKzQ'

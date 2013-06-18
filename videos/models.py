@@ -6,4 +6,7 @@ class Video(models.Model):
 	video_link = models.URLField()
 
 	def __unicode__(self):
-		return (self.video_link)
+		if self.video_title is not None:
+			return self.video_title
+		else:
+			return self.video_link
